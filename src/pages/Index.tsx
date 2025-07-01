@@ -1,7 +1,6 @@
 
 import { Shield, Zap, Trash2, Share2, Video, Monitor, Brain, Globe, Lock } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import FeatureCard from "@/components/FeatureCard";
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
@@ -11,12 +10,12 @@ const Index = () => {
     {
       icon: Shield,
       title: "End-to-End Encryption",
-      description: "Every conversation on VanishRoom is completely private. Messages, files, and video streams are encrypted from the moment they leave your device until they reach the person you're talking to. No one in between — not even us — can read or listen."
+      description: "Every conversation on VanishRoom is completely private. Messages, files, and video streams are encrypted from the moment they leave your device until they reach the person you're talking to."
     },
     {
       icon: Zap,
       title: "No Account Required",
-      description: "Forget signups, passwords, and email verifications. With VanishRoom, you can start a conversation instantly. Just share a private link and you're connected. It's fast, frictionless, and anonymous."
+      description: "Forget signups, passwords, and email verifications. With VanishRoom, you can start a conversation instantly. Just share a private link and you're connected."
     },
     {
       icon: Trash2,
@@ -31,7 +30,7 @@ const Index = () => {
     {
       icon: Video,
       title: "Voice & Video Calling",
-      description: "Crystal-clear voice and video communication that feels personal and direct. Whether you're having a quick chat or a deep conversation, you'll feel like you're in the same room — without any noise from the outside world."
+      description: "Crystal-clear voice and video communication that feels personal and direct. Whether you're having a quick chat or a deep conversation, you'll feel connected."
     },
     {
       icon: Monitor,
@@ -41,7 +40,7 @@ const Index = () => {
     {
       icon: Brain,
       title: "Focused on You, Not Your Data",
-      description: "Unlike traditional platforms, VanishRoom doesn't collect personal data, usage analytics, or metadata. Your activity is your business — we don't track, monitor, or remember anything about you."
+      description: "Unlike traditional platforms, VanishRoom doesn't collect personal data, usage analytics, or metadata. Your activity is your business — we don't track or monitor anything."
     },
     {
       icon: Globe,
@@ -51,52 +50,63 @@ const Index = () => {
     {
       icon: Lock,
       title: "Built for Privacy-Sensitive Use",
-      description: "Whether you're a journalist, researcher, activist, or just someone who values their digital space — VanishRoom is made for you. It's a digital room that disappears when you're done, leaving nothing behind."
+      description: "Whether you're a journalist, researcher, activist, or just someone who values their digital space — VanishRoom is made for you. A digital room that disappears when you're done."
     }
   ];
 
   return (
-    <div className="min-h-screen bg-slate-50">
+    <div className="min-h-screen bg-white">
       <Hero />
       
-      {/* Features Section */}
-      <section className="py-20 px-4 max-w-7xl mx-auto bg-slate-100">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-slate-900 mb-4">
-            Privacy-First Communication
-          </h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Every feature is designed with your privacy in mind. No compromises, no exceptions.
-          </p>
-        </div>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
-            <FeatureCard key={index} {...feature} />
-          ))}
+      {/* Features Section with modern design */}
+      <section className="py-32 px-6 bg-slate-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-20">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-white text-slate-600 text-sm font-medium mb-8 shadow-sm">
+              Privacy-First Features
+            </div>
+            <h2 className="text-5xl md:text-6xl font-black text-slate-900 mb-6 leading-tight">
+              Communication
+              <span className="block text-slate-600 font-light">Without Compromise</span>
+            </h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto font-light leading-relaxed">
+              Every feature is designed with your privacy in mind. No exceptions, no backdoors, no compromises.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <FeatureCard key={index} {...feature} />
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4 bg-slate-900 text-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6">
-            Ready for Truly Private Communication?
+      {/* Modern CTA Section */}
+      <section className="py-32 px-6 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
+        {/* Background pattern */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(255,255,255,0.1),transparent_50%)]"></div>
+        
+        <div className="max-w-5xl mx-auto text-center relative">
+          <h2 className="text-5xl md:text-6xl font-black mb-8 leading-tight">
+            Ready for True
+            <span className="block text-slate-300 font-light">Digital Privacy?</span>
           </h2>
-          <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-            Start a secure conversation that leaves no trace. Create your VanishRoom now.
+          <p className="text-xl text-slate-300 mb-12 max-w-3xl mx-auto font-light leading-relaxed">
+            Start a secure conversation that leaves no trace. Create your VanishRoom now and experience 
+            communication the way it should be — private, secure, and ephemeral.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button 
               size="lg" 
-              className="bg-white text-slate-900 hover:bg-slate-100 font-semibold px-8 py-3 text-lg"
+              className="bg-white text-slate-900 hover:bg-slate-100 font-bold px-12 py-6 text-lg rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-200"
             >
               Create Private Room
             </Button>
             <Button 
               size="lg" 
               variant="outline" 
-              className="border-white text-white hover:bg-white hover:text-slate-900 font-semibold px-8 py-3 text-lg"
+              className="border-2 border-white text-white hover:bg-white hover:text-slate-900 font-bold px-12 py-6 text-lg rounded-2xl transition-all duration-200"
             >
               Join Existing Room
             </Button>
