@@ -1,11 +1,13 @@
-
 import { Shield, Zap, Trash2, Share2, Video, Monitor, Brain, Globe, Lock } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 import FeatureCard from "@/components/FeatureCard";
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
 
 const Index = () => {
+  const navigate = useNavigate();
+
   const features = [
     {
       icon: Shield,
@@ -104,6 +106,7 @@ const Index = () => {
           <div className="flex flex-col sm:flex-row gap-8 justify-center">
             <Button 
               size="lg" 
+              onClick={() => navigate('/room')}
               className="bg-white text-slate-900 hover:bg-slate-100 dark:bg-gradient-to-r dark:from-purple-600 dark:to-pink-600 dark:text-white dark:hover:from-purple-700 dark:hover:to-pink-700 font-bold px-16 py-8 text-xl rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105"
             >
               Create Private Room
@@ -111,6 +114,7 @@ const Index = () => {
             <Button 
               size="lg" 
               variant="outline" 
+              onClick={() => navigate('/room')}
               className="border-2 border-white text-white hover:bg-white hover:text-slate-900 dark:border-purple-400 dark:text-purple-400 dark:hover:bg-purple-400 dark:hover:text-white font-bold px-16 py-8 text-xl rounded-2xl transition-all duration-300 transform hover:scale-105"
             >
               Join Existing Room
