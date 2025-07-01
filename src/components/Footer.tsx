@@ -3,14 +3,14 @@ import { Shield, Github, Twitter, Mail } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-slate-900 border-t border-slate-800 py-12 px-4">
+    <footer className="bg-slate-900 py-12 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="col-span-2">
             <div className="flex items-center space-x-3 mb-4">
-              <div className="p-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg">
-                <Shield className="w-6 h-6 text-white" />
+              <div className="p-2 bg-white rounded-lg">
+                <Shield className="w-6 h-6 text-slate-900" />
               </div>
               <span className="text-2xl font-bold text-white">VanishRoom</span>
             </div>

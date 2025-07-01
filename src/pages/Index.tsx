@@ -56,16 +56,16 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900">
+    <div className="min-h-screen bg-slate-50">
       <Hero />
       
       {/* Features Section */}
-      <section className="py-20 px-4 max-w-7xl mx-auto">
+      <section className="py-20 px-4 max-w-7xl mx-auto bg-slate-100">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-4">
+          <h2 className="text-4xl font-bold text-slate-900 mb-4">
             Privacy-First Communication
           </h2>
-          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
             Every feature is designed with your privacy in mind. No compromises, no exceptions.
           </p>
         </div>
@@ -78,25 +78,25 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-blue-600 to-purple-700">
+      <section className="py-20 px-4 bg-slate-900 text-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
+          <h2 className="text-4xl font-bold mb-6">
             Ready for Truly Private Communication?
           </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
             Start a secure conversation that leaves no trace. Create your VanishRoom now.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               size="lg" 
-              className="bg-white text-blue-600 hover:bg-slate-100 font-semibold px-8 py-3 text-lg"
+              className="bg-white text-slate-900 hover:bg-slate-100 font-semibold px-8 py-3 text-lg"
             >
               Create Private Room
             </Button>
             <Button 
               size="lg" 
               variant="outline" 
-              className="border-white text-white hover:bg-white hover:text-blue-600 font-semibold px-8 py-3 text-lg"
+              className="border-white text-white hover:bg-white hover:text-slate-900 font-semibold px-8 py-3 text-lg"
             >
               Join Existing Room
             </Button>
