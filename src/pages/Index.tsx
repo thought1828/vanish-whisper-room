@@ -55,26 +55,28 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white dark:bg-slate-950 transition-colors duration-300">
       <Hero />
       
-      {/* Features Section with modern design */}
-      <section className="py-32 px-6 bg-slate-50">
+      {/* Features Section with enhanced styling */}
+      <section className="py-32 px-6 bg-slate-50 dark:bg-slate-900 transition-colors duration-300">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-20">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-white text-slate-600 text-sm font-medium mb-8 shadow-sm">
+          <div className="text-center mb-24">
+            <div className="inline-flex items-center px-6 py-3 rounded-full bg-white dark:bg-slate-800 text-blue-600 dark:text-purple-400 text-sm font-semibold mb-8 shadow-lg border border-blue-100 dark:border-purple-800/50">
               Privacy-First Features
             </div>
-            <h2 className="text-5xl md:text-6xl font-black text-slate-900 mb-6 leading-tight">
+            <h2 className="text-6xl md:text-7xl font-black text-slate-900 dark:text-white mb-8 leading-tight tracking-tighter">
               Communication
-              <span className="block text-slate-600 font-light">Without Compromise</span>
+              <span className="block bg-gradient-to-r from-slate-500 to-slate-700 dark:from-slate-400 dark:to-slate-200 bg-clip-text text-transparent font-light">
+                Without Compromise
+              </span>
             </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto font-light leading-relaxed">
+            <p className="text-xl text-slate-600 dark:text-slate-300 max-w-4xl mx-auto font-light leading-relaxed">
               Every feature is designed with your privacy in mind. No exceptions, no backdoors, no compromises.
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
             {features.map((feature, index) => (
               <FeatureCard key={index} {...feature} />
             ))}
@@ -82,31 +84,34 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Modern CTA Section */}
-      <section className="py-32 px-6 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
-        {/* Background pattern */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(255,255,255,0.1),transparent_50%)]"></div>
+      {/* Enhanced CTA Section */}
+      <section className="py-32 px-6 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 dark:from-slate-950 dark:via-purple-950 dark:to-slate-950 text-white relative overflow-hidden">
+        {/* Enhanced background pattern */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(59,130,246,0.15),transparent_50%)] dark:bg-[radial-gradient(circle_at_30%_40%,rgba(147,51,234,0.2),transparent_50%)]"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.02)_50%,transparent_75%)]"></div>
         
-        <div className="max-w-5xl mx-auto text-center relative">
-          <h2 className="text-5xl md:text-6xl font-black mb-8 leading-tight">
+        <div className="max-w-6xl mx-auto text-center relative">
+          <h2 className="text-6xl md:text-7xl font-black mb-10 leading-tight tracking-tighter">
             Ready for True
-            <span className="block text-slate-300 font-light">Digital Privacy?</span>
+            <span className="block bg-gradient-to-r from-blue-400 to-purple-400 dark:from-purple-400 dark:to-pink-400 bg-clip-text text-transparent font-light">
+              Digital Privacy?
+            </span>
           </h2>
-          <p className="text-xl text-slate-300 mb-12 max-w-3xl mx-auto font-light leading-relaxed">
+          <p className="text-xl text-slate-300 dark:text-slate-400 mb-16 max-w-4xl mx-auto font-light leading-relaxed">
             Start a secure conversation that leaves no trace. Create your VanishRoom now and experience 
             communication the way it should be — private, secure, and ephemeral.
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+          <div className="flex flex-col sm:flex-row gap-8 justify-center">
             <Button 
               size="lg" 
-              className="bg-white text-slate-900 hover:bg-slate-100 font-bold px-12 py-6 text-lg rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-200"
+              className="bg-white text-slate-900 hover:bg-slate-100 dark:bg-gradient-to-r dark:from-purple-600 dark:to-pink-600 dark:text-white dark:hover:from-purple-700 dark:hover:to-pink-700 font-bold px-16 py-8 text-xl rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105"
             >
               Create Private Room
             </Button>
             <Button 
               size="lg" 
               variant="outline" 
-              className="border-2 border-white text-white hover:bg-white hover:text-slate-900 font-bold px-12 py-6 text-lg rounded-2xl transition-all duration-200"
+              className="border-2 border-white text-white hover:bg-white hover:text-slate-900 dark:border-purple-400 dark:text-purple-400 dark:hover:bg-purple-400 dark:hover:text-white font-bold px-16 py-8 text-xl rounded-2xl transition-all duration-300 transform hover:scale-105"
             >
               Join Existing Room
             </Button>
