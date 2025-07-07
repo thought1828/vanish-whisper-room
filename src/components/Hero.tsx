@@ -82,6 +82,7 @@ const Hero = () => {
         <div className="flex flex-col sm:flex-row gap-6 justify-center mb-20">
           <Button 
             size="lg" 
+            onClick={() => window.location.href = '/room'}
             className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 dark:from-purple-600 dark:to-pink-600 dark:hover:from-purple-700 dark:hover:to-pink-700 text-white font-bold px-12 py-8 text-xl rounded-2xl shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 group border-0"
           >
             Start Private Room
@@ -90,6 +91,7 @@ const Hero = () => {
           <Button 
             size="lg" 
             variant="outline" 
+            onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}
             className="border-2 border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-200 bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm hover:bg-white/80 dark:hover:bg-slate-700/80 hover:border-slate-400 dark:hover:border-slate-500 font-bold px-12 py-8 text-xl rounded-2xl transition-all duration-300 transform hover:scale-105"
           >
             Learn More

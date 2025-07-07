@@ -86,42 +86,75 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Enhanced CTA Section */}
-      <section className="py-32 px-6 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 dark:from-slate-950 dark:via-purple-950 dark:to-slate-950 text-white relative overflow-hidden">
-        {/* Enhanced background pattern */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(59,130,246,0.15),transparent_50%)] dark:bg-[radial-gradient(circle_at_30%_40%,rgba(147,51,234,0.2),transparent_50%)]"></div>
-        <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.02)_50%,transparent_75%)]"></div>
-        
-        <div className="max-w-6xl mx-auto text-center relative">
-          <h2 className="text-6xl md:text-7xl font-black mb-10 leading-tight tracking-tighter">
-            Ready for True
-            <span className="block bg-gradient-to-r from-blue-400 to-purple-400 dark:from-purple-400 dark:to-pink-400 bg-clip-text text-transparent font-light">
-              Digital Privacy?
-            </span>
-          </h2>
-          <p className="text-xl text-slate-300 dark:text-slate-400 mb-16 max-w-4xl mx-auto font-light leading-relaxed">
-            Start a secure conversation that leaves no trace. Create your VanishRoom now and experience 
-            communication the way it should be — private, secure, and ephemeral.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-8 justify-center">
-            <Button 
-              size="lg" 
-              onClick={() => navigate('/room')}
-              className="bg-white text-slate-900 hover:bg-slate-100 dark:bg-gradient-to-r dark:from-purple-600 dark:to-pink-600 dark:text-white dark:hover:from-purple-700 dark:hover:to-pink-700 font-bold px-16 py-8 text-xl rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105"
-            >
-              Create Private Room
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              onClick={() => navigate('/room')}
-              className="border-2 border-white text-white hover:bg-white hover:text-slate-900 dark:border-purple-400 dark:text-purple-400 dark:hover:bg-purple-400 dark:hover:text-white font-bold px-16 py-8 text-xl rounded-2xl transition-all duration-300 transform hover:scale-105"
-            >
-              Join Existing Room
-            </Button>
+        {/* Enhanced Demo Section */}
+        <section className="py-24 px-6 bg-white dark:bg-slate-950 transition-colors duration-300">
+          <div className="max-w-6xl mx-auto text-center">
+            <div className="inline-flex items-center px-6 py-3 rounded-full bg-blue-50 dark:bg-purple-900/30 text-blue-700 dark:text-purple-300 text-sm font-semibold mb-8 border border-blue-200 dark:border-purple-700/50">
+              ✨ See it in action
+            </div>
+            <h2 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white mb-8 leading-tight tracking-tighter">
+              Experience the Future of
+              <span className="block bg-gradient-to-r from-blue-600 to-purple-600 dark:from-purple-400 dark:to-pink-400 bg-clip-text text-transparent">
+                Private Communication
+              </span>
+            </h2>
+            <p className="text-xl text-slate-600 dark:text-slate-300 mb-12 max-w-3xl mx-auto font-light">
+              Join thousands who have already made the switch to truly private digital conversations.
+            </p>
+            
+            {/* Stats */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+              {[
+                { number: "0", label: "Data Points Collected", icon: "🔒" },
+                { number: "100%", label: "End-to-End Encrypted", icon: "🛡️" },
+                { number: "∞", label: "Messages Auto-Deleted", icon: "🗑️" }
+              ].map((stat, index) => (
+                <div key={index} className="p-8 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+                  <div className="text-4xl mb-4">{stat.icon}</div>
+                  <div className="text-4xl font-black text-slate-900 dark:text-white mb-2">{stat.number}</div>
+                  <div className="text-slate-600 dark:text-slate-400 font-medium">{stat.label}</div>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+
+        {/* Enhanced CTA Section */}
+        <section className="py-32 px-6 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 dark:from-slate-950 dark:via-purple-950 dark:to-slate-950 text-white relative overflow-hidden">
+          {/* Enhanced background pattern */}
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(59,130,246,0.15),transparent_50%)] dark:bg-[radial-gradient(circle_at_30%_40%,rgba(147,51,234,0.2),transparent_50%)]"></div>
+          <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.02)_50%,transparent_75%)]"></div>
+          
+          <div className="max-w-6xl mx-auto text-center relative">
+            <h2 className="text-6xl md:text-7xl font-black mb-10 leading-tight tracking-tighter">
+              Ready for True
+              <span className="block bg-gradient-to-r from-blue-400 to-purple-400 dark:from-purple-400 dark:to-pink-400 bg-clip-text text-transparent font-light">
+                Digital Privacy?
+              </span>
+            </h2>
+            <p className="text-xl text-slate-300 dark:text-slate-400 mb-16 max-w-4xl mx-auto font-light leading-relaxed">
+              Start a secure conversation that leaves no trace. Create your VanishRoom now and experience 
+              communication the way it should be — private, secure, and ephemeral.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-8 justify-center">
+              <Button 
+                size="lg" 
+                onClick={() => navigate('/room')}
+                className="bg-white text-slate-900 hover:bg-slate-100 dark:bg-gradient-to-r dark:from-purple-600 dark:to-pink-600 dark:text-white dark:hover:from-purple-700 dark:hover:to-pink-700 font-bold px-16 py-8 text-xl rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105"
+              >
+                Create Private Room
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline" 
+                onClick={() => navigate('/room')}
+                className="border-2 border-white text-white hover:bg-white hover:text-slate-900 dark:border-purple-400 dark:text-purple-400 dark:hover:bg-purple-400 dark:hover:text-white font-bold px-16 py-8 text-xl rounded-2xl transition-all duration-300 transform hover:scale-105"
+              >
+                Join Existing Room
+              </Button>
+            </div>
+          </div>
+        </section>
 
       <Footer />
     </div>
