@@ -16,6 +16,7 @@ interface RoomCreationProps {
 }
 
 const RoomCreation = ({ onCreateRoom, onJoinRoom }: RoomCreationProps) => {
+  console.log('RoomCreation component is rendering with new features');
   const [userName, setUserName] = useState('');
   const [roomIdToJoin, setRoomIdToJoin] = useState('');
   const [roomPassword, setRoomPassword] = useState('');
